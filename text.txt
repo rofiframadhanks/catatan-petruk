@@ -1,0 +1,132 @@
+//#include <iostream>
+//using namespace std;
+//
+//void hitungRerata() {
+//   int n;
+//   double total = 0;
+//   double data;
+//
+//   cin >> n;
+//
+//   for (int i = 0; i < n; i++) {
+//      cin >> data;
+//      total += data;
+//   }
+//
+//   double rerata = total / n;
+//   cout << rerata << endl;
+//}
+
+
+//#include <iostream>
+//#include <cmath>
+//using namespace std;
+//
+//double jarak(double x1, double y1, double x2, double y2) {
+//    double dx = x2 - x1;
+//    double dy = y2 - y1;
+//    double d = sqrt(dx*dx + dy*dy);
+//    return d;
+//}
+
+//#include <iostream>
+//using namespace std;
+//
+//void konversi(double& suhu, char from, char to) {
+//    if (from == 'c') {
+//        if (to == 'f') {
+//            suhu = suhu * 1.8 + 32;
+//        } else if (to == 'k') {
+//            suhu = suhu + 273.15;
+//        } else if (to == 'r') {
+//            suhu = suhu * 0.8;
+//        }
+//    } else if (from == 'f') {
+//        if (to == 'c') {
+//            suhu = (suhu - 32) / 1.8;
+//        } else if (to == 'k') {
+//            suhu = (suhu + 459.67) / 1.8;
+//        } else if (to == 'r') {
+//            suhu = (suhu - 32) / 2.25;
+//        }
+//    } else if (from == 'k') { 
+//        if (to == 'c') {
+//            suhu = suhu - 273.15;
+//        } else if (to == 'f') {
+//            suhu = suhu * 1.8 - 459.67;
+//        } else if (to == 'r') {
+//            suhu = (suhu - 273.15) * 0.8;
+//        }
+//    } else if (from == 'r') {
+//        if (to == 'c') {
+//            suhu = suhu * 1.25;
+//        } else if (to == 'f') {
+//            suhu = suhu * 2.25 + 32;
+//        } else if (to == 'k') {
+//            suhu = suhu * 1.25 + 273.15;
+//        }
+//    }
+//}
+
+//#include <iostream>
+//using namespace std;
+//
+//int fib(int n) {
+//    if (n == 0) {
+//        return 0;
+//    } else if (n == 1) {
+//        return 1;
+//    } else {
+//        return fib(n - 2) + fib(n - 1);
+//    }
+//}
+
+//#include <iostream>
+//
+//using namespace std;
+//
+//void tukar(int &a, int &b, int &c) {
+//    if (a > b) swap(a, b);
+//    if (b > c) swap(b, c);
+//    if (a > b) swap(a, b);
+//}
+//#include <iostream>
+//using namespace std;
+
+//int nilai_terbesar(int a, int b) {
+//    return (a > b) ? a : b;
+//}
+//
+//int main() {
+//    int x, y;
+//    
+//    cout << "Masukkan dua bilangan: ";
+//    cin >> x >> y;
+//    
+//    int max = nilai_terbesar(x, y);
+//    cout << "Bilangan terbesar: " << max << endl;
+//    
+//    return 0;
+//}
+
+#include <iostream>
+using namespace::std;
+
+long long perkalian(long long digitAkhir, long long digit9) {
+    if (digit9 == 0) 
+        return 0;
+    
+    else if (digit9 == 1) 
+        return digitAkhir;
+
+    return digitAkhir * perkalian(digitAkhir, digit9 - 1);
+}
+
+
+main(){
+    int digitakhir,digit9;
+	cin>>digitakhir;
+	cin>>digit9;
+	cout<<"hasli :"<<perkalian(digitakhir, digit9);
+ 	cout<<endl;
+}
